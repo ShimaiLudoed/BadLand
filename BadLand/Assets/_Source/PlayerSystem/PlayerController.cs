@@ -23,9 +23,9 @@ namespace PlayerSystem
         {
             _playerView.Jump(_playerModel.Force);
         }
-        public void TiltCharacter(float horizontal)
+      /*  public void TiltCharacter(float horizontal)
         {
             _playerView.TiltCharacter(horizontal);
-        }
+        }*/
     }
 }

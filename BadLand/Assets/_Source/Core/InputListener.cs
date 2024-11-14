@@ -21,7 +21,7 @@ namespace Core
                 horizontal = Input.GetAxis("Horizontal");
                 Vector2 vec = new Vector2(horizontal, 0).normalized;
                 _playerController.Move(vec);
-                _playerController.TiltCharacter(horizontal);
+               // _playerController.TiltCharacter(horizontal);
                 if (Input.GetKeyDown(KeyCode.Space)) 
                 {
 
