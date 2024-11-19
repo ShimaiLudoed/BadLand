@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEditor.Rendering;
 using UnityEngine;
@@ -29,8 +30,7 @@ namespace PlayerSystem
         }
         public void Move(float speed, Vector2 direction)
         {
-            Vector3 dir = new Vector3(direction.x, direction.y, 0);
-            Rb.velocity = dir * speed * Time.deltaTime;
+            Rb.velocity = new Vector2(direction.x * speed, Rb.velocity.y);
         }
         public void Jump(float force)
         {
@@ -39,18 +39,29 @@ namespace PlayerSystem
         }
         public void TiltCharacter(float moveInput)
         {
-/*            if (!IsGround)
+            float currentTilt = Rb.rotation;
+            if (!IsGround)
             {
                 float targetTilt = moveInput * tiltAngle;
-                float currentTilt = Mathf.LerpAngle(transform.eulerAngles.z, targetTilt, Time.deltaTime * tiltSpeed);
-                transform.rotation = Quaternion.Euler(0, 0, currentTilt);
-                //не гноби плез :( (гпт) 
+                Rb.rotation=NewAngle(currentTilt, targetTilt);
             }
             else
             {
-                Rb.angularVelocity
-            }*/
-                    
+                if (moveInput != 0)
+                {
+                    currentTilt += moveInput * tiltSpeed * tiltSpeed;
+                    if (currentTilt >= 360f) 
+                    {
+                        currentTilt -= 360f; 
+                    }
+
+                    Rb.rotation = currentTilt; 
+                }
+                else
+                {
+                    Rb.rotation = NewAngle(currentTilt, 0);
+                }
+            }
         }
         private void OnCollisionEnter2D(Collision2D collision)
         {
@@ -65,6 +76,20 @@ namespace PlayerSystem
             {
                 IsGround = false;
             }
+        }
+
+        private float NewAngle(float CurrentTilt,float TargetTilt)
+        {
+            return Mathf.Lerp(CurrentTilt, TargetTilt, tiltSpeed);
+        }
+        public void ChangeMass(float multy)
+        {
+            transform.localScale*=multy;
+            Rb.mass *= multy;
+        }
+        public void Death()
+        {
+            Destroy(gameObject);
         }
     }
 }
