@@ -1,3 +1,4 @@
+using LevelSystem_hate_system_love_sys_;
 using PlayerSystem;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,12 +13,15 @@ namespace Core
         [SerializeField] private InputListener inputListener;
         private PlayerController _controller;
         [SerializeField] private PlayerView _playerView;
+        private LevelController _level;
+        [SerializeField] private LevelView levelView;
 
         private void Awake()
         {
             _playerModel = new PlayerModel(_playerView.Speed, _playerView.Force);
             _controller=new PlayerController(_playerView, _playerModel, collisionDetector);
-            inputListener.Construct(_controller);
+            _level = new LevelController(levelView);
+            inputListener.Construct(_controller,_level);
             collisionDetector.Construct(_controller);
         }
     }

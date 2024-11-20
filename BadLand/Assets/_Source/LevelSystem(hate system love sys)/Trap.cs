@@ -6,11 +6,12 @@ public class Trap : MonoBehaviour
 {
     [SerializeField] private FallForObstacle fallObj;
     [SerializeField] private LayerMask player;
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if(LayerMaskCheck.ContainsLayer(player, collision.gameObject.layer))
+        if(LayerMaskCheck.ContainsLayer(player, other.gameObject.layer))
         {
             fallObj.Fall();
+            Debug.Log("Пуп");
         }    
     }
 }

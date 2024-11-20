@@ -35,7 +35,7 @@ namespace PlayerSystem
         public void Jump(float force)
         {
             Rb.velocity = new Vector2(Rb.velocity.x, 0);
-            Rb.AddForce(Vector3.up * force, ForceMode2D.Impulse); //типа умный
+            Rb.AddForce(Vector3.up * force, ForceMode2D.Impulse); //пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
         }
         public void TiltCharacter(float moveInput)
         {
