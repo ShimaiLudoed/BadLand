@@ -1,8 +1,10 @@
 using LevelSystem_hate_system_love_sys_;
 using PlayerSystem;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Core
 {
@@ -10,12 +12,21 @@ namespace Core
     {
         private PlayerController _playerController;
         private LevelController _levelController;
+        [SerializeField] private Button continueButton;
+        [SerializeField] private Button restartButton;
 
         public void Construct(PlayerController player,LevelController level)
         {
             _playerController = player;
             _levelController = level;
         }
+
+        private void Start()
+        {
+            continueButton.onClick.AddListener(_levelController.Continue);
+            restartButton.onClick.AddListener(_levelController.Restart);
+        }
+
         private void Update()
         {
             if (_playerController != null)
