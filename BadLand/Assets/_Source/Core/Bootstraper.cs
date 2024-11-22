@@ -14,7 +14,7 @@ namespace Core
         private PlayerController _controller;
         [SerializeField] private PlayerView _playerView;
         private LevelController _level;
-        [SerializeField] private LevelView levelView;
+        [SerializeField] private Game levelView;
 
         private void Awake()
         {
@@ -24,5 +24,6 @@ namespace Core
             inputListener.Construct(_controller,_level);
             collisionDetector.Construct(_controller);
         }
+
     }
 }
