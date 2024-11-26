@@ -14,7 +14,11 @@ namespace PlayerSystem
         public float tiltSpeed; 
         public bool IsGround { get; private set; }
         [SerializeField] private LayerMask groundLayer;
-        
+
+        private void Update()
+        {
+            Debug.Log(IsGround);
+        }
 
         private void Start()
         {
