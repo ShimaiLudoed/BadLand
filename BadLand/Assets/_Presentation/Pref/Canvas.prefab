@@ -279,7 +279,6 @@ GameObject:
   - component: {fileID: 5849184399521245210}
   - component: {fileID: 6558410607418729355}
   - component: {fileID: 2348528535053492978}
-  - component: {fileID: 5102890774032440005}
   m_Layer: 5
   m_Name: GamePanel
   m_TagString: Untagged
@@ -345,19 +344,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5102890774032440005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1574911197894269458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f39bf78c9720689498420451c620e661, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pausePanel: {fileID: 2355626920897323776}
 --- !u!1 &2355626920897323776
 GameObject:
   m_ObjectHideFlags: 0
@@ -872,7 +858,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &3780844679971654107
 MonoBehaviour:

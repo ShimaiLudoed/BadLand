@@ -8,11 +8,13 @@ using UnityEngine.Serialization;
 public class CollisionDetector : MonoBehaviour
 {
     public event Action OnPlayerDead;
+    public event Action OnPlayerFinish;
     private PlayerController _playerController;
     [SerializeField] private LayerMask powerUp;
     private ChangeMass _changeMass;
     [SerializeField] private LayerMask saw;
-    [SerializeField] private LayerMask FallingObstacle;
+    [SerializeField] private LayerMask fallingObstacle;
+    [SerializeField] private LayerMask finish;
     [SerializeField] private PlayerView _playerView;
 
     public void Construct(PlayerController playerController)
@@ -32,9 +34,14 @@ public class CollisionDetector : MonoBehaviour
         {
             OnPlayerDead?.Invoke();
         }
-        if(LayerMaskCheck.ContainsLayer(FallingObstacle,collision.gameObject.layer)&& _playerView.IsGround)
+        if(LayerMaskCheck.ContainsLayer(fallingObstacle,collision.gameObject.layer)&& _playerView.IsGround)
         {
             OnPlayerDead?.Invoke();
+        }
+
+        if (LayerMaskCheck.ContainsLayer(finish, collision.gameObject.layer))
+        {
+            OnPlayerFinish?.Invoke();
         }
     }
 }

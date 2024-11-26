@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Mathematics;
-using Unity.VisualScripting;
-using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace PlayerSystem
 {
@@ -23,10 +19,6 @@ namespace PlayerSystem
         private void Start()
         {
             Rb = GetComponent<Rigidbody2D>();
-        }
-        private void Update()
-        {
-            Debug.Log(IsGround);
         }
         public void Move(float speed, Vector2 direction)
         {
@@ -90,6 +82,8 @@ namespace PlayerSystem
         public void Death()
         {
             Destroy(gameObject);
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }
