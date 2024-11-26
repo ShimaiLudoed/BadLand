@@ -1,47 +1,48 @@
 using DG.Tweening;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class CheckDotWeen : MonoBehaviour
+namespace LevelSystem
 {
-    [SerializeField] private Transform endPoint;
-    [SerializeField] private float duration;
-    [SerializeField] private AnimationCurve ease;
-
-    private void Awake()
+    public class CheckDotWeen : MonoBehaviour
     {
-        //Moveblin(AnimationCallback);
-        UniversalTween();
-    }
+        [SerializeField] private Transform endPoint;
+        [SerializeField] private float duration;
+        [SerializeField] private AnimationCurve ease;
 
-    private void Moveblin(Action callback = null)
-    {
-        Tween moveTween = transform.DOMove(endPoint.position, duration)
-            .SetEase(ease)
-            .OnComplete(() =>
-            {
-                callback?.Invoke();
-            })
-            .OnUpdate(() =>
-            {
-                Debug.Log(transform.position);
-            });
-    }
+        private void Awake()
+        {
+            //Moveblin(AnimationCallback);
+            UniversalTween();
+        }
 
-    private void UniversalTween()
-    {
-        float timer = 10;
-        DOTween.To(() => timer, x => timer = x, 0, timer)
-            .OnUpdate(() =>
-            {
-                Debug.Log(timer);
-            });
-    }
+        private void Moveblin(Action callback = null)
+        {
+            Tween moveTween = transform.DOMove(endPoint.position, duration)
+                .SetEase(ease)
+                .OnComplete(() =>
+                {
+                    callback?.Invoke();
+                })
+                .OnUpdate(() =>
+                {
+                    Debug.Log(transform.position);
+                });
+        }
 
-    private void AnimationCallback()
-    {
-        Debug.Log("Complete animation!");
+        private void UniversalTween()
+        {
+            float timer = 10;
+            DOTween.To(() => timer, x => timer = x, 0, timer)
+                .OnUpdate(() =>
+                {
+                    Debug.Log(timer);
+                });
+        }
+
+        private void AnimationCallback()
+        {
+            Debug.Log("Complete animation!");
+        }
     }
 }

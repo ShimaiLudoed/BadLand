@@ -1,20 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraFollow : MonoBehaviour
+namespace LevelSystem
 {
-    [SerializeField] private Transform player; 
-    [SerializeField] private float offsetX ;
-    [SerializeField] private float smoothSpeed; 
-
-    void LateUpdate()
+    public class CameraFollow : MonoBehaviour
     {
-        if (player != null)
+        [SerializeField] private Transform player; 
+        [SerializeField] private float offsetX ;
+        [SerializeField] private float smoothSpeed; 
+
+        void LateUpdate()
         {
-            Vector3 desiredPosition = new Vector3(player.position.x + offsetX, transform.position.y, transform.position.z);
-            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
-            transform.position = smoothedPosition;
+            if (player != null)
+            {
+                Vector3 desiredPosition = new Vector3(player.position.x + offsetX, transform.position.y, transform.position.z);
+                Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+                transform.position = smoothedPosition;
+            }
         }
     }
 }

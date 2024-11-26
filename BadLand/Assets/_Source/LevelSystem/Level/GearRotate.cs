@@ -1,13 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class GearRotate : MonoBehaviour
+namespace LevelSystem
 {
-    [SerializeField] private float rotationSpeed; 
-
-    void Update()
+    public class GearRotate : MonoBehaviour
     {
-        transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
+        [SerializeField] private float rotationSpeed; 
+
+        void Update()
+        {
+            transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
+        }
     }
 }
