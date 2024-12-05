@@ -4,17 +4,16 @@ using UnityEngine.SceneManagement;
 
 namespace LevelSystem
 {
-    public class Game : MonoBehaviour
+    public class Game 
     {
-        [SerializeField] private GameObject _startGame;
-        [SerializeField] private GameObject _endGame;
-        [SerializeField] private GameObject[] _pref;
-        [SerializeField] private GameObject _pausePanel;
+        private GameObject _pausePanel;
         private LevelBuild _levelBuild;
         private Difficult _difficulty;
-        
-        public void Construct (Difficult difficult)
+
+        public Game(Difficult difficult, GameObject pausePanel, LevelBuild level)
         {
+            _levelBuild = level;
+            _pausePanel=pausePanel; 
             _difficulty = difficult;
         }
 
@@ -39,7 +38,6 @@ namespace LevelSystem
         public void StartGame()
         {
             _difficulty.LoadDifficulty();
-            _levelBuild = new LevelBuild(_pref,_difficulty.LevelDificulty,_endGame,_startGame);
             _levelBuild.GenerateLevel();
         }
 

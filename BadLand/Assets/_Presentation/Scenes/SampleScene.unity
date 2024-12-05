@@ -156,7 +156,7 @@ PrefabInstance:
     - target: {fileID: 5044548574292560048, guid: 2818afe5cb0780f4cbe332d87b7408e1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1598693441}
+      objectReference: {fileID: 0}
     - target: {fileID: 5044548574292560048, guid: 2818afe5cb0780f4cbe332d87b7408e1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -292,7 +292,7 @@ PrefabInstance:
     - target: {fileID: 8647575749070287184, guid: 2818afe5cb0780f4cbe332d87b7408e1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1598693441}
+      objectReference: {fileID: 0}
     - target: {fileID: 8647575749070287184, guid: 2818afe5cb0780f4cbe332d87b7408e1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -858,7 +858,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1598693440}
   - component: {fileID: 1598693439}
-  - component: {fileID: 1598693441}
   m_Layer: 0
   m_Name: Bootka
   m_TagString: Untagged
@@ -878,10 +877,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bad76332dc9460d4c8f05452349f7aa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _startGame: {fileID: 2450328187741537825, guid: d47262398aec3ce41ad427d7b3bc1fda, type: 3}
+  _endGame: {fileID: 6626360711923807870, guid: e93832549b3e1e34cbc8fd963ca83e77, type: 3}
+  _pref:
+  - {fileID: 8806534736143073882, guid: c183bf2d75bb77c45974aa2f27d6a209, type: 3}
+  - {fileID: 2147461648942262457, guid: 7320bb44aa7459b4697ce9f0e631589a, type: 3}
+  - {fileID: 2039199560730984151, guid: 636148ea402e3054c82b148bf3f8a085, type: 3}
+  _pausePanel: {fileID: 1022127113}
   collisionDetector: {fileID: 1786217603}
   _playerView: {fileID: 1786217599}
   inputListener: {fileID: 1786217598}
-  _game: {fileID: 1598693441}
 --- !u!4 &1598693440
 Transform:
   m_ObjectHideFlags: 0
@@ -897,25 +902,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1598693441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1598693438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f39bf78c9720689498420451c620e661, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _startGame: {fileID: 2450328187741537825, guid: d47262398aec3ce41ad427d7b3bc1fda, type: 3}
-  _endGame: {fileID: 6626360711923807870, guid: e93832549b3e1e34cbc8fd963ca83e77, type: 3}
-  _pref:
-  - {fileID: 2147461648942262457, guid: 7320bb44aa7459b4697ce9f0e631589a, type: 3}
-  - {fileID: 8806534736143073882, guid: c183bf2d75bb77c45974aa2f27d6a209, type: 3}
-  - {fileID: 2039199560730984151, guid: 636148ea402e3054c82b148bf3f8a085, type: 3}
-  _pausePanel: {fileID: 1022127113}
 --- !u!1 &1761990956
 GameObject:
   m_ObjectHideFlags: 0

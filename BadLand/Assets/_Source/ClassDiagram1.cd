@@ -1,33 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Core.Bootstraper">
-    <Position X="7.5" Y="0.5" Width="1.5" />
+    <Position X="7.25" Y="0.5" Width="1.5" />
     <AssociationLine Name="collisionDetector" Type="PlayerSystem.CollisionDetector" ManuallyRouted="true">
       <Path>
-        <Point X="8.875" Y="1.925" />
-        <Point X="8.875" Y="2.177" />
-        <Point X="8.24" Y="2.177" Type="JumpStart" />
-        <Point X="8.073" Y="2.177" Type="JumpEnd" />
-        <Point X="7.849" Y="2.177" Type="JumpStart" />
-        <Point X="7.682" Y="2.177" Type="JumpEnd" />
+        <Point X="8.625" Y="3.146" />
+        <Point X="8.625" Y="2.177" />
         <Point X="7.25" Y="2.177" />
         <Point X="7.25" Y="6.142" />
         <Point X="7.5" Y="6.142" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>IAAAAAAAACAAAACAAAAIAQCAAAAgAAAAAAAAAEAAAEQ=</HashCode>
+      <HashCode>IIAAAAAAACAAAACAAAAIAQCAAAAgAAAACAAAQEBACEQ=</HashCode>
       <FileName>Assets\_Source\Core\Bootstraper.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="_controller" />
-      <Field Name="_difficult" />
-      <Field Name="_game" />
-      <Field Name="_level" />
-      <Field Name="_playerModel" />
-      <Field Name="_playerView" />
       <Field Name="collisionDetector" />
+      <Field Name="_playerView" />
       <Field Name="inputListener" />
+      <Field Name="_playerModel" />
+      <Field Name="_controller" />
+      <Field Name="_level" />
+      <Field Name="_game" />
+      <Field Name="_difficult" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Core.InputListener" Collapsed="true">
@@ -45,8 +41,8 @@
       <FileName>Assets\_Source\Core\InputListener.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="_levelController" />
       <Field Name="_playerController" />
+      <Field Name="_levelController" />
     </ShowAsAssociation>
   </Class>
   <Class Name="LevelSystem.CameraFollow" Collapsed="true">
@@ -71,7 +67,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="LevelSystem.Difficult" Collapsed="true">
-    <Position X="14" Y="0.5" Width="1.5" />
+    <Position X="14" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAAAACAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
       <FileName>Assets\_Source\LevelSystem\Level\Difficult.cs</FileName>
@@ -85,9 +81,9 @@
     </TypeIdentifier>
   </Class>
   <Class Name="LevelSystem.Game" Collapsed="true">
-    <Position X="10.5" Y="0.75" Width="1.5" />
+    <Position X="10.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EIAACAgAAAAAgABAAAAAAAAgAAAAAAAACAAAQARACAA=</HashCode>
+      <HashCode>EIAACAgAAAAAAABAAAAAAAAgAAAAAAAAAAAAAAQACAA=</HashCode>
       <FileName>Assets\_Source\LevelSystem\Level\Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -133,6 +129,9 @@
       <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAEAAAAABAAAAAAAAAAA=</HashCode>
       <FileName>Assets\_Source\LevelSystem\Level\Trap.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="fallObj" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="PlayerSystem.CollisionDetector" Collapsed="true">
     <Position X="7.5" Y="6" Width="1.5" />
@@ -140,7 +139,11 @@
       <Path>
         <Point X="8.688" Y="6.691" />
         <Point X="8.688" Y="7.271" />
-        <Point X="4" Y="7.271" />
+        <Point X="7" Y="7.271" />
+        <Point X="7" Y="3.066" />
+        <Point X="5.24" Y="3.066" Type="JumpStart" />
+        <Point X="5.073" Y="3.066" Type="JumpEnd" />
+        <Point X="4" Y="3.066" />
         <Point X="4" Y="2.691" />
       </Path>
     </AssociationLine>
@@ -149,25 +152,25 @@
       <FileName>Assets\_Source\PlayerSystem\CollisionDetector.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="_playerView" />
       <Field Name="_playerController" />
+      <Field Name="_playerView" />
     </ShowAsAssociation>
   </Class>
   <Class Name="PlayerSystem.PlayerController">
-    <Position X="0.5" Y="2.75" Width="1.5" />
-    <AssociationLine Name="_collisionDetector" Type="PlayerSystem.CollisionDetector" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="0.844" Y="4.815" />
-        <Point X="0.844" Y="7.271" />
-        <Point X="7.938" Y="7.271" />
-        <Point X="7.938" Y="6.691" />
-      </Path>
-    </AssociationLine>
+    <Position X="1.5" Y="3" Width="1.5" />
     <AssociationLine Name="_playerView" Type="PlayerSystem.PlayerView" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="2" Y="3.348" />
-        <Point X="3.5" Y="3.348" />
+        <Point X="3" Y="3.598" />
+        <Point X="3.5" Y="3.598" />
         <Point X="3.5" Y="2.312" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_collisionDetector" Type="PlayerSystem.CollisionDetector" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.844" Y="5.065" />
+        <Point X="1.844" Y="7.271" />
+        <Point X="7.938" Y="7.271" />
+        <Point X="7.938" Y="6.691" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -175,13 +178,13 @@
       <FileName>Assets\_Source\PlayerSystem\PlayerController.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="_collisionDetector" />
-      <Field Name="_playerModel" />
       <Field Name="_playerView" />
+      <Field Name="_playerModel" />
+      <Field Name="_collisionDetector" />
     </ShowAsAssociation>
   </Class>
   <Class Name="PlayerSystem.PlayerModel" Collapsed="true">
-    <Position X="4.5" Y="5" Width="1.5" />
+    <Position X="3.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>Assets\_Source\PlayerSystem\PlayerModel.cs</FileName>

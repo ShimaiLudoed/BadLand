@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LevelSystem.CameraFollow" Collapsed="true">
+    <Position X="4" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAIAAAAAAAAAABAAIAAAAAAAA=</HashCode>
+      <FileName>Assets\_Source\LevelSystem\Camera\CameraFollow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LevelSystem.ChangeMass" Collapsed="true">
+    <Position X="7.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\_Source\LevelSystem\ChangeMass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LevelSystem.DestroyObstacle" Collapsed="true">
+    <Position X="9.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAgAAAAAAA=</HashCode>
+      <FileName>Assets\_Source\LevelSystem\Level\DestroyObstacle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LevelSystem.Difficult" Collapsed="true">
+    <Position X="1.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAACAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Assets\_Source\LevelSystem\Level\Difficult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LevelSystem.FallForObstacle" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAIAAAAAAAAAAEAAAAgAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Assets\_Source\LevelSystem\Level\FallForObstacle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LevelSystem.Game" Collapsed="true">
+    <Position X="2" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EIAACAgAAAAAAABAAAAAAAAgAAAAAAAAAAAAAAQACAA=</HashCode>
+      <FileName>Assets\_Source\LevelSystem\Level\Game.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_levelBuild" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LevelSystem.GearRotate" Collapsed="true">
+    <Position X="9.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Assets\_Source\LevelSystem\Level\GearRotate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LevelSystem.LevelBuild" Collapsed="true">
+    <Position X="3" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAABAACAAAAAAAAAAAAAAAIAAAAASAAAAAA=</HashCode>
+      <FileName>Assets\_Source\LevelSystem\Level\LevelBuild.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LevelSystem.LevelController" Collapsed="true">
+    <Position X="7" Y="3.5" Width="1.5" />
+    <AssociationLine Name="_collisionDetector" Type="PlayerSystem.CollisionDetector" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.281" Y="3.5" />
+        <Point X="8.281" Y="1.816" />
+        <Point X="10.062" Y="1.816" />
+        <Point X="10.062" Y="1.441" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>EAAgCAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAw=</HashCode>
+      <FileName>Assets\_Source\LevelSystem\Level\LevelController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_game" />
+      <Field Name="_collisionDetector" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LevelSystem.RandomObstacle" Collapsed="true">
+    <Position X="5.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAACAAAAAAAAAAAABAAAAAAAAAAAAAAAAAECA=</HashCode>
+      <FileName>Assets\_Source\LevelSystem\Level\RandomObstacle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LevelSystem.Trap" Collapsed="true">
+    <Position X="2.25" Y="4.25" Width="1.5" />
+    <AssociationLine Name="fallObj" Type="LevelSystem.FallForObstacle" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3" Y="4.941" />
+        <Point X="3" Y="5.241" />
+        <Point X="2" Y="5.241" />
+        <Point X="2" Y="4.191" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAEAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\_Source\LevelSystem\Level\Trap.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="fallObj" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PlayerSystem.CollisionDetector" Collapsed="true">
+    <Position X="9.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CIAAAAAEAAgAgQAEAAAIAAAAAAAAAAAAQAAgCAAAAAA=</HashCode>
+      <FileName>Assets\_Source\PlayerSystem\CollisionDetector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.Bootstraper" Collapsed="true">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <AssociationLine Name="_level" Type="LevelSystem.LevelController" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.844" Y="1.191" />
+        <Point X="6.844" Y="1.566" />
+        <Point X="7.938" Y="1.566" />
+        <Point X="7.938" Y="3.5" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="inputListener" Type="Core.InputListener" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.516" Y="1.191" />
+        <Point X="6.516" Y="2.566" />
+        <Point X="5.75" Y="2.566" />
+        <Point X="5.75" Y="2.191" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>IIAAAAAAACAAAACAAAAIAQCAAAAgAAAACAAAQEBACEQ=</HashCode>
+      <FileName>Assets\_Source\Core\Bootstraper.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="collisionDetector" />
+      <Field Name="inputListener" />
+      <Field Name="_level" />
+      <Field Name="_game" />
+      <Field Name="_difficult" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Core.InputListener" Collapsed="true">
+    <Position X="4.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAgIAEAQAAIAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Assets\_Source\Core\InputListener.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_levelController" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
