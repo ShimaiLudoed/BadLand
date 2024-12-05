@@ -24,6 +24,7 @@ namespace Core
             _game.Construct(_difficult);
             _level = new LevelController(_game,collisionDetector);
             inputListener.Construct(_controller,_level);
+            
         }
         private void Start()
         {

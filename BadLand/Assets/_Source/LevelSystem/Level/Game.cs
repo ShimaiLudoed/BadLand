@@ -45,7 +45,7 @@ namespace LevelSystem
 
         public void FinishGame()
         {
-            _difficulty.IncreaseDifficulty();
+            //_difficulty.IncreaseDifficulty();
             Time.timeScale = 1f;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }

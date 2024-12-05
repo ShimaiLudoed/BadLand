@@ -4,8 +4,8 @@ namespace LevelSystem
 {
     public class Difficult
     {
-        public int LevelDificulty = 5;
-
+        public int LevelDificulty = 3;
+        
         public void IncreaseDifficulty()
         {
             float level = LevelDificulty * 1.5f;
@@ -13,7 +13,6 @@ namespace LevelSystem
             PlayerPrefs.SetInt("PlayerDifficulty", LevelDificulty);
             PlayerPrefs.Save();
         }
-
         public void LoadDifficulty()
         {
             LevelDificulty = PlayerPrefs.GetInt("PlayerDifficulty",LevelDificulty);

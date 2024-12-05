@@ -45,7 +45,7 @@ namespace PlayerSystem
             {
                 if (moveInput != 0)
                 {
-                    currentTilt -= moveInput * tiltSpeed;
+                    currentTilt -= moveInput * tiltSpeed* Time.deltaTime;
                     if (currentTilt >= 360f) 
                     {
                         currentTilt -= 360f; 
